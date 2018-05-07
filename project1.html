@@ -1,0 +1,51 @@
+<html>
+	<head>
+	<style>
+	body{
+		background:pink;
+		border-color:red;
+		border-width:10px;
+		font-family:boostssk;
+	}
+	button{
+		background:hotpink;
+		border-color:yellow;
+		font-family:boostssk;
+		position:relative;
+		top:20;
+		left:10;
+	}
+	#admin
+	{
+		position:absolute;
+		top:90;
+		left:400;
+	}
+	</style>
+	</head>
+	<body>
+	<h1>
+		Welcome to BIOLOGY CLASSIFICATIONS GROUP
+	</h1>
+	<button onclick="admin()" id="admin">DOWNLOAD ADMIN PANEL</button></a>
+	<button onclick="clint" id="home">search</button>
+	<script>
+		function admin()
+		{
+			var sure = confirm("Are You Admin?");
+			if(sure == 1)
+			{
+				document.write("good");
+				
+			}
+			else
+			{
+				alert("Don't click in admin button");
+			}
+			
+		}
+	
+	
+	</script>
+	</body>
+</html>
