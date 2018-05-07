@@ -1,0 +1,140 @@
+<html><head>
+		<title>bricks history...</title>
+		<style>
+		body{
+		background:hotpink;
+		text-align:center;
+		}
+		input{
+			background:pink;
+			font-size:20px;
+			
+		}
+		
+		.marquee{background:blue;
+		font-size:25px;
+
+		}
+		img{height:200px;
+		width:380px;}
+		div{
+			text-align:center;
+		}
+		</style>
+	</head>
+	<body align="center">
+	<h1>Welcome to Simanto Bricks Manufactory</h1>
+	<h2>Shyamkur Mashespur Jhenaidah; Mobile:01716551933</h2>
+	<img src="bricks.png"/>
+	<p>Do you want to buy some Bricks? SBM Bricks are most popular and high qualities. </p>
+	<table id"a" border="10" align=center>
+		<tr>
+			<td align="center">Price per tracktor:<input id="mammound" placeholder="price" onkeyup="taka()" type="number"></td>
+			<td align="center">Bricks Ammount:<input id="bammound" placeholder="Bricks Amount" onkeyup="taka()"  type="number"></td>
+			<td onkeyup="taka()" align="center">Number of Tracktor:<input id="cammound" placeholder="tracktor" onkeyup="taka()"  type="number"></td>
+		</tr>
+		<tr>
+			<td align="center"><mark><marquee direction="right">S.B.M</marquee></mark></td>
+			<td align="center"><marquee><mark>S.B.M</mark></marquee></td>
+			<td align="center"><mark><marquee>S.B.M</marquee></mark></td>
+		</tr>
+		<tr>
+			<td align="center">Total price:<input id="tprice" onkeyup="taka('you')"  type="number">T.K</td>
+			<td align="center">Per Brick Price:<div id="uprice">Loading..</div></td>
+			<td align="center">Total Bricks:<div id="percarprice">Loading..</div></td>
+		
+		
+	</tr>
+	</table>
+	<marquee class="marquee"><font color="white">Simanto Bricks Menufactural.....   Simanto Bricks Menufactural.....Simanto Bricks Menufactural.....   Simanto Bricks Menufactural.....Simanto Bricks Menufactural.....   Simanto Bricks Menufactural.....</font></marquee>
+
+	<table border="10" align="center">
+		<tbody><tr>
+			<td>want to give<input id="targettk" onkeyup="ttk()" placeholder="Target Ammount"  
+   type="number"></td>
+			<td>per bricks rate:<input id="luprice" onkeyup="ttk('X')" placeholder="unit price"  
+    type="number"></td>
+		</tr>
+		<tr>
+		<td>Total Bricks:<input id="ltotalbricks" onkeyup="ttk('Y')"  
+   type="number"></td>
+		<td><mark>Per Bricks Price:<div id="lperbricksprice"></div></mark></td>
+	</tr>
+	<tr><td colspan="2" align="center"><mark>per tracktor rate:<div id="demo"></div></mark></td></tr>
+	</tbody></table>
+	<marquee>This Program is Created By Mahbub Alam.</marquee>
+	
+	<script>
+		function taka()
+		{
+			var cars,cammount,ammount,totalbricks,totalprice,tprice,unitprice,percarprice,bammount,carammount,pertprice;
+			
+				//input_sector
+				ammount=document.getElementById("mammound").value;
+				bammount=document.getElementById("bammound").value;
+				carammount=document.getElementById("cammound").value;
+				tprice=document.getElementById("tprice").value;
+				
+				//calculation_sector
+				cars=bammount/2000;
+				cammount=carammount-(-cars);
+				totalprice=ammount*cammount;
+				 
+				totalbricks=bammount-(-carammount*2000);
+				unitprice=totalprice/totalbricks;
+				
+				
+				
+				
+				
+				//output_sector
+				document.getElementById("tprice").value=Math.round(totalprice);
+				document.getElementById("uprice").innerHTML=unitprice;
+				document.getElementById("percarprice").innerHTML=totalbricks;
+				
+			
+			
+			
+		}
+		function ttk(unknown)
+		{
+			
+			var target,targets,unitp,lptotalbricks,lptotlabricks,lptotlabrickss,unitps,tp;
+			if(unknown=="X")
+			{
+			
+			//input_sector
+			target=document.getElementById("targettk").value;
+			unitp=document.getElementById("luprice").value;
+			
+			
+			//claculation_sector
+			lptotlabricks=target/unitp;
+			tp=unitp*2000;
+			
+			
+			//output_sector
+			document.getElementById("ltotalbricks").value=Math.round(lptotlabricks);
+			document.getElementById("lperbricksprice").innerHTML=unitp;
+			document.getElementById("demo").innerHTML=tp;
+			}
+			else if(unknown=="Y")
+				{	
+					targets=document.getElementById("targettk").value;
+					var ltb=document.getElementById("ltotalbricks").value;
+					
+					unitps=targets/ltb;
+					tp=unitps*2000;
+					
+					document.getElementById("luprice").value=Math.round(unitps);
+				document.getElementById("lperbricksprice").innerHTML=unitps;
+				document.getElementById("demo").innerHTML=tp;
+			
+			
+				}
+			
+		
+		}
+	</script>
+
+</body></html>
